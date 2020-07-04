@@ -1,3 +1,12 @@
+// Логотип веб-студии
+%logo {
+    display: inline-block;
+    font-family: Raleway;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
 %address {
     font-style: normal;
     font-size: 14px;
@@ -37,11 +46,3 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-
-%logo {
-    display: inline-block;
-    font-family: Raleway;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-  }

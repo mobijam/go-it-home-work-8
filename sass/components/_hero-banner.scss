@@ -1,0 +1,72 @@
+// /Баннер с фоновым рисунком
+.banner {
+    @include centeredFlex();
+    flex-direction: column;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/banner-image.jpg);
+    background-color: rgba(47, 48, 58, 0.8);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @media screen and (min-width: $mobile) {
+        max-width: 480px;
+        height: 400px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        max-width: 768px;
+        height: 400px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 1600px;
+        height: 600px;
+    }    
+}
+  
+.banner-text-box {
+    display: inline-block;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $mobile) {
+        max-width: 360px;
+        height: 84px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        max-width: 360px;
+        height: 84px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 696px;
+        height: 120px;
+    }   
+}
+  
+.banner-text {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $page-hero-text;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 26px;
+        line-height: 1.62;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 26px;
+        line-height: 1.62;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }    
+  }

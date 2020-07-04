@@ -2,52 +2,58 @@
 body {
     background-color: $primary-bg;  
     font-family: $main-font;
+    
+    @media screen  and (min-width: $desktop) {
+        padding-top: 80px;
+    }
 }
-  
+body.modal-open {
+    overflow: hidden;
+}
+
 img {
     display: block;
 }
- 
+
+ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 480px;
+
+    @media screen and (min-width: $mobile) {
+        width: 480px;  
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 768px;  
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 1200px;  
+    }    
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+    @media screen and (min-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;  
+    }
 
-// Логотип веб-студии
-.studio-logo {
-    @extend %logo;
-    color: $main-accent;
-    font-size: 24px;
-    line-height: 1.17;
-}
-
-// Часть логотипа
-.logo {
-    color: $logo-part-text;
-}
-
-// Логотип веб-студии в футере
-.studio-logo-footer {
-  @extend %logo;
-  font-size: 22px;
-  line-height: 1.18;
-
-    &:visited {
-      color: $main-accent;
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;  
     }
 }
-
-.footer-logo {
-  color: $page-hero-text;
-}
-
-
-  

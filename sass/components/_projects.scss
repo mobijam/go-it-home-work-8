@@ -1,0 +1,72 @@
+// Секция "Чем мы занимаемся"
+
+// Заголовок секции
+.our-skills {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+
+    .projects-title {    
+        color: $secondary-page-text;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-align: center;
+    
+    }
+  
+    .categories {
+        display: flex;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+        list-style-type: none;
+
+        & li {
+            margin-right: 30px;
+        }
+
+        & li:last-child {
+            margin-right: 0px;
+        }
+    }
+  
+    .target-img {
+        position: relative;
+    }
+  
+  // Подписи к проектам
+    .project {
+        position: absolute;
+  
+        display: block;
+        left: 0px;
+        bottom: 0px;
+  
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+  
+        min-width: 370px;
+    
+        color: $page-hero-text;
+        background-color: $fig-caption-bg;
+  
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+  }
