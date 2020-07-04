@@ -1,0 +1,181 @@
+// Оформление контента шапки сайта
+.page-header {
+    position: relative;
+    width: 100%;
+    background-color: $primary-bg;
+    border-bottom: 1px solid #ececec;
+}
+// Позиционирование мобильного меню
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+// Оформление бургер-кнопки мобильного меню 
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover, &:focus {
+        fill: $main-accent;
+    }
+
+    & .icon-cross {
+        display: none;
+      }
+  
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }  
+}
+  
+.menu-button.is-open {
+    & .icon-cross {
+        display: block;
+    }
+    & .icon-menu {
+        display: none;
+    }
+} 
+  
+//   Оформление выпадающего мобильного меню
+.menu-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $primary-bg;
+    padding: 60px;
+    text-align: center;
+    font-size: 18px;
+  
+    & .nav-bar {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+}
+
+.nav-bar {
+      & li:not(:last-child) {
+          margin-bottom: 40px;
+      }
+
+      & li:last-child {
+        margin-bottom: 60px;
+    }
+}
+
+// Cсылки для перехода по страницам лендинга
+.link {
+    position: relative;
+    color: $secondary-page-text;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: $animation-period $timing-function;
+  
+    &:hover, &:focus {
+        color: $main-accent;
+        }
+}
+    
+// индикатор текущей страницы
+  .current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 29px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $main-accent;
+}
+    
+//Контакты веб-студии
+.contacts {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding: 0px;
+    list-style-type: none;
+  
+      & li:not(:last-child) {
+      margin-bottom: 16px;
+      }
+}
+    
+// Оформление активных ссылок контактов
+.studio-contacts {
+      color: $primary-page-text;
+      font-size: 18px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: $animation-period $timing-function;
+  
+      &:hover, &:focus {
+        color: $main-accent;
+      }
+}
+    
+// Иконки контактов
+.icon-envelope { 
+      @extend %icon;      
+      width: 16px;
+      height: 11px;
+}
+    
+.icon-smartphone {   
+      @extend %icon;
+      width: 10px;
+      height: 14px;
+}
+  
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  
+    transition: opacity 250ms linear, visibility 250ms linear;
+  }
+  
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+  
+  .mobile-menu .content {
+    height: 100%;
+    background-color: #fff;
+    width: 70%;
+  
+    transform: translateX(-100%);
+  
+    transition: transform 250ms linear 250ms;
+  }
+  
+.mobile-menu.is-open .content {
+    transform: translateX(0);
+  }

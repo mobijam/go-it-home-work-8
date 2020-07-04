@@ -1,0 +1,47 @@
+%address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+%icon {
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 10px;
+    fill: currentColor;
+    cursor: pointer;
+}
+
+%icon-link {
+    @include centeredFlex();
+    
+    width: 44px;
+    height: 44px;
+  
+    border-radius: 50%;
+    transition: all $animation-period $timing-function;
+}
+
+%info {
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+%input-style {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+%logo {
+    display: inline-block;
+    font-family: Raleway;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
