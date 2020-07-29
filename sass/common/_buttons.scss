@@ -31,6 +31,10 @@
       fill: $main-accent;
   }
 
+  & .icon-menu {
+    display: block;
+}
+
   & .icon-cross {
       display: none;
     }
@@ -44,6 +48,7 @@
   & .icon-cross {
       display: block;
   }
+
   & .icon-menu {
       display: none;
   }
@@ -118,6 +123,36 @@
 }
 
 // Кнопки-фильтры страницы "Портфолио"
+
+.filter {
+  @include centeredFlex();
+  
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.filter-btn {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+
 .nav-portfolio {
   min-height: 38px;
   padding: 6px 22px;

@@ -6,9 +6,12 @@
     text-align: center;
   }
   
-  
 .location {
     display: inline-block;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      margin-bottom: 60px;
+    }
 
     @media screen and  (min-width: $desktop) {
       margin-right: 69px;
@@ -16,31 +19,60 @@
     
 }
 
+.tab-view {
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex($type: flex, $align: baseline, $justify: space-around);
+  }
+}
+.footer-box {
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex($type: flex, $align: baseline, $justify: space-around);
+  }
+}
+
   // Адрес веб-студии
 .map-link {
     @extend %address;
     display: block;
     color: $page-hero-text;
+
+    @media screen and (min-width: $mobile) and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
   }
 
   // Контакты веб-студии в футере
   .footer-contacts {
     @extend %address;
     color: $footer-contacts;
+
+    @media screen and (min-width: $mobile) and (max-width: 1199px) {
+     &:not(:last-child) {
+      margin-bottom: 8px;
+     }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &:not(:last-child) {
+        margin-bottom: 9px;
+       }
+    }
   }
 
-// .community {
-//   @media screen  and (min-width: $mobile) {
-//     display: inline-flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
+.community {
+  @media screen and (min-width: $desktop) {
+    margin-right: 94px;
+  }
+}
 
 //  Призыв "присоединяйтесь"
   .join-us {
     display: inline-block;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   
     color: $page-hero-text;
   
@@ -50,6 +82,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
   }
+
   // Список социальных сетей в футере
 .community-footer {
     @include centeredFlex();
@@ -60,14 +93,14 @@
   
     list-style-type: none;
 
-    & li {
-      margin-right: 10px;
-  
-      &:last-child {
-        margin-right: 94px;
-      }
+    & li:not(:last-child) {
+      margin-right: 10px;    
+    }
+
+    @media screen and (min-width:$mobile) and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   }
-}
 
 .icon-footer {
   @extend %icon-link;
@@ -78,4 +111,57 @@
     background-color: $main-accent;
   }
 
+}
+
+// Форма подписки в футере
+.subscription {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.footer-form {
+  @media screen  and (min-width: $tablet) and (max-width: 1199px) {
+    @include centeredFlex();
+    flex-direction: column;
+  }
+}
+
+.footer-input {
+  display: inline-block;
+
+  margin-right: 12px;
+  padding: 15px 16px;
+  
+  width: 450px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width:$mobile) and (max-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
+}
+
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
 }
