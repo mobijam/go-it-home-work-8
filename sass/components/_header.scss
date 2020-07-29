@@ -1,16 +1,13 @@
 // Оформление контента шапки сайта
 .page-header {
-    position: relative;
     width: 100%;
     background-color: $primary-bg;
     border-bottom: 1px solid #ececec;
-  
-    @media screen  and (min-width: $desktop) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 // Позиционирование мобильного меню
@@ -32,36 +29,6 @@ nav {
       padding-top: 24px;
       padding-bottom: 25px;
     }    
-}
-
-// Оформление бургер-кнопки мобильного меню 
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-
-    &:hover, &:focus {
-        fill: $main-accent;
-    }
-
-    & .icon-cross {
-        display: none;
-      }
-  
-    @media screen and (min-width: $tablet) {
-      display: none;
-    }  
-}
-  
-.menu-button.is-open {
-    & .icon-cross {
-        display: block;
-    }
-    & .icon-menu {
-        display: none;
-    }
 } 
   
 //   Оформление выпадающего мобильного меню

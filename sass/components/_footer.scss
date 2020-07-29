@@ -3,15 +3,17 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: $footer-bg;
+    text-align: center;
   }
   
-.footer-box {
-  @include centeredFlex($type: flex, $align: baseline);
-}
   
 .location {
     display: inline-block;
-    margin-right: 69px;
+
+    @media screen and  (min-width: $desktop) {
+      margin-right: 69px;
+    }
+    
 }
 
   // Адрес веб-студии
@@ -26,7 +28,15 @@
     @extend %address;
     color: $footer-contacts;
   }
-  
+
+// .community {
+//   @media screen  and (min-width: $mobile) {
+//     display: inline-flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
+
 //  Призыв "присоединяйтесь"
   .join-us {
     display: inline-block;
@@ -42,7 +52,7 @@
   }
   // Список социальных сетей в футере
 .community-footer {
-    @include centeredFlex($type: flex, $justify: center);
+    @include centeredFlex();
   
     margin-top: 0px;
     margin-bottom: 0px;

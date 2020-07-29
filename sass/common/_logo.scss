@@ -22,8 +22,6 @@
 // Логотип веб-студии в футере
 .studio-logo-footer {
   @extend %logo;
-  font-size: 22px;
-  line-height: 1.18;
 
     &:visited {
       color: $main-accent;
@@ -32,5 +30,16 @@
 // Часть логотипа в футере
     & .footer-logo {
     color: $page-hero-text;
+    }
+
+    @media screen and (min-width: $mobile) {
+        font-size: 24px;
+        line-height: 1.17;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 22px;
+        line-height: 1.18; 
     }
 }
