@@ -28,9 +28,8 @@
     }
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        display: flex;
+        @include centeredFlex();
         flex-wrap: wrap;
-        margin-right: -30px;
 
         & .employee-card:nth-child(-n+2) {
           margin-bottom: 30px;
@@ -45,7 +44,7 @@
         }
     }
     @media screen and (min-width: $desktop) {
-        display: flex;
+        @include centeredFlex();
         flex-wrap: wrap;
 
         & .employee-card:not(:last-child){
@@ -67,6 +66,11 @@
 
     & img {
       margin-bottom: 30px;
+      min-height: 260px;
+
+      @media screen and (min-width: $mobile) and (max-width: 767px) {
+        min-height: 320px;
+      }
     }
   }
 
@@ -86,8 +90,7 @@
 
 // Список иконок социальных сетей
   .social-links-list {
-    display: flex;
-    justify-content: center;
+    @include centeredFlex();
     
     & li:not(:last-child) {
         margin-right: 10px;

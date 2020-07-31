@@ -20,9 +20,8 @@
 // Оформление списка клиентов
   .clients-list {
     @media screen and (max-width: 767px) {
-        display: flex;
+        @include centeredFlex();
         flex-wrap: wrap;
-        margin-right: -30px;
   
         & li {
             width: calc((100% - 2 * 30px) / 2);
@@ -38,9 +37,8 @@
       }
   
       @media screen and (min-width: $tablet) and (max-width: 1199px) {
-          display: flex;
+          @include centeredFlex();
           flex-wrap: wrap;
-          margin-right: -30px;
   
           & li {
             width: calc((100% - 3 * 30px) / 3);
@@ -57,9 +55,8 @@
 
       }
       @media screen and (min-width: $desktop) {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
+          @include centeredFlex($type: flex, $align: center, $justify: space-evenly);
+          flex-wrap: wrap;         
   
           & li:not(:last-child){
             margin-right: 30px;

@@ -15,9 +15,8 @@
     }
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        display: flex;
+        @include centeredFlex($type: flex, $align: baseline, $justify: center);
         flex-wrap: wrap;
-        margin-right: -30px;
 
         & li:nth-child(-n+2) {
           margin-bottom: 30px;
@@ -32,7 +31,7 @@
         }
     }
     @media screen and (min-width: $desktop) {
-        display: flex;
+        @include centeredFlex($type: flex, $align: baseline, $justify: center);
         flex-wrap: wrap;
 
         & li:not(:last-child){

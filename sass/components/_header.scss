@@ -39,6 +39,10 @@ nav {
     font-size: 18px;
 
     @media screen and (max-width: 767px) {
+      &.is-open {
+        display: block;
+      }
+
       display: none;
       position: absolute;
       top: 100%;
@@ -52,10 +56,6 @@ nav {
     @media screen and (min-width: $tablet) {
       @include centeredFlex();
       box-shadow: none;
-    }
-
-    &.is-open {
-      display: block;
     }
 }
 
