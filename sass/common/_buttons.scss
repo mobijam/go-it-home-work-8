@@ -128,25 +128,27 @@
   
   margin-right: 0;
   margin-left: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 35px;
   }
 }
 
 .filter-btn {
+  margin-bottom: 15px;
+  
+  &:not(:last-child) {
   margin-right: 8px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
-    &:nth-child(-n + 3) {
-      margin-bottom: 15px;
-    }
   }
 }
 

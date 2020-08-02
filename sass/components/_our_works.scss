@@ -20,7 +20,7 @@
         }
 
         li {
-          width: calc((100% - 2 * 30px) / 2);
+          width: calc((100% - 1 * 30px) / 2);
         }
       }
       @media screen and (min-width: $desktop) {
@@ -36,7 +36,7 @@
             }
     
           li {
-            width: calc((100% - 3 * 30px) / 3);
+            width: calc((100% - 2 * 30px) / 3);
           }
       }    
   }

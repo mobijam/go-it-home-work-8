@@ -24,7 +24,7 @@
     @media screen and  (min-width: $desktop) {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       margin-right: 69px;
       margin-bottom: 0;
     }
@@ -42,26 +42,15 @@
     }
 
     @media screen and (min-width: $desktop) {
-      @include centeredFlex($type: flex, $align: center, $justify: flex-start);
+      @include centeredFlex($type: flex, $justify: flex-start);
       margin-bottom: 9px;
     }
   }
 
   // Контакты веб-студии в футере  
-  address {
-    @include centeredFlex();
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    @media screen and (min-width: $desktop) {
-      @include centeredFlex($type: flex, $align: center, $justify: flex-start);
-
-    }
-  }
-
   .footer-contacts {
     @extend %address;
-    display: inline-block;
+    display: block;
     color: $footer-contacts;
     margin-bottom: 8px;
 
@@ -70,6 +59,9 @@
     }
 
     @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       margin-bottom: 9px;
     }
   }
