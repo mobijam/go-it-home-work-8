@@ -25,7 +25,7 @@
     opacity: 0;
     pointer-events: none;
   
-    & .modal {
+    .modal {
       transform: translate(-50%, -50%) scale(0.9);
     }
   }
@@ -145,6 +145,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
+    transition: all $animation-period $timing-function;
   
     .modal-input:focus-within + &,
     .modal-input:not(:placeholder-shown) + & {
@@ -224,7 +225,7 @@
   
     color: $primary-page-text;
   
-    & a {
+     a {
       color: $main-accent;
     }
 

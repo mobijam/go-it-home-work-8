@@ -2,15 +2,13 @@
 body {
     background-color: $primary-bg;  
     font-family: $main-font;
-
-    @media screen and (min-width: $mobile) {
-        padding-top: 60px;
-    }
+    padding-top: 60px;
     
     @media screen  and (min-width: $desktop) {
         padding-top: 80px;
     }
 }
+
 body.modal-open {
     overflow: hidden;
 }
@@ -22,16 +20,15 @@ img {
 }
 
 ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
 p {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
-
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -52,10 +49,8 @@ p {
 }
 
 .section {
-    @media screen and (min-width: $mobile) {
-        padding-top: 60px;
-        padding-bottom: 60px;  
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     @media screen and (min-width: $desktop) {
         padding-top: 94px;

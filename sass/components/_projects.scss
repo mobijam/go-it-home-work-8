@@ -6,7 +6,7 @@
         display: none;
     }
     @media screen and (min-width: $desktop) {
-        padding-top: 0px;
+        padding-top: 0;
     }
 }
 
@@ -14,7 +14,7 @@
 
     .projects-title {    
         color: $secondary-page-text;
-        margin-top: 0px;
+        margin-top: 0;
         margin-bottom: 50px;
         font-weight: 700;
         font-size: 36px;
@@ -26,17 +26,13 @@
   
     .categories {
         display: flex;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
         list-style-type: none;
 
-        & li {
+        li:not(:last-child) {
             margin-right: 30px;
-        }
-
-        & li:last-child {
-            margin-right: 0px;
         }
     }
   
@@ -49,11 +45,11 @@
         position: absolute;
   
         display: block;
-        left: 0px;
-        bottom: 0px;
+        left: 0;
+        bottom: 0;
   
-        margin-bottom: 0px;
-        margin-top: 0px;
+        margin-bottom: 0;
+        margin-top: 0;
         padding-top: 27px;
         padding-bottom: 27px;
   

@@ -11,9 +11,10 @@
     margin-right: auto;
     text-align: center;
 
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url('../images/banner-480.jpg');
+
     @media screen and (min-width: $mobile) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url('../images/banner-480.jpg');
-        
+        max-width: 100%;
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
@@ -73,8 +74,8 @@
 }
   
 .banner-text {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;

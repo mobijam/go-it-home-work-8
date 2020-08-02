@@ -14,9 +14,9 @@
 
 // Позиционирование мобильного меню
 nav {
+    height: 60px;
+    @include centeredFlex($type: flex, $align: center, $justify: space-between);
     @media screen  and (min-width: $mobile) {
-      @include centeredFlex($type: flex, $align: center, $justify: space-between);
-      height: 60px;
       padding-top: 16px;
       padding-bottom: 16px;
     }
@@ -62,11 +62,11 @@ nav {
 .nav-bar {
   @media screen and (max-width: 767px) {
     
-    & li:not(:last-child) {
+    li:not(:last-child) {
           margin-bottom: 40px;
     }
 
-    & li:last-child {
+    li:last-child {
         margin-bottom: 60px;
     }
   }
@@ -75,7 +75,7 @@ nav {
     display: flex;
     margin-right: 84px;
 
-    & li:not(:last-child) {
+    li:not(:last-child) {
       margin-right: 50px;
     }      
   }
@@ -128,14 +128,12 @@ nav {
     @media screen and (min-width: $desktop) {
       top: 44px;
     }
-
-
 }
     
 //Контакты веб-студии
 .contacts {
   @media screen and (max-width: 767px) {
-    & li:not(:last-child) {
+    li:not(:last-child) {
       margin-bottom: 16px;
     }
   }
@@ -151,10 +149,9 @@ nav {
     align-items: center;
     justify-content: center;
     
-    & li:not(:last-child) {
+    li:not(:last-child) {
       margin-right: 30px;
     }
-
   }
 }
     
@@ -165,13 +162,13 @@ nav {
     text-decoration: none;
     transition: $animation-period $timing-function;
 
-    & .icon-envelope { 
+    .icon-envelope { 
       @extend %icon;      
       width: 16px;
       height: 11px;
     }
     
-    & .icon-smartphone {   
+    .icon-smartphone {   
       @extend %icon;
       width: 10px;
       height: 14px;
@@ -190,13 +187,13 @@ nav {
       font-size: 12px;
       line-height: 1.17;
 
-      & .icon-envelope { 
+      .icon-envelope { 
         margin-right: 8px;     
         width: 14px;
         height: 10px;
       }
       
-      & .icon-smartphone {   
+      .icon-smartphone {   
         margin-right: 8px;
         width: 10px;
         height: 14px;

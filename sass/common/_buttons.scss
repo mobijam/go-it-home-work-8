@@ -30,28 +30,27 @@
   &:hover, &:focus {
       fill: $main-accent;
   }
-
-  & .icon-menu {
+  .icon-menu {
     display: block;
-}
+  }
 
-  & .icon-cross {
-      display: none;
+  .icon-cross {
+    display: none;
+  }
+
+  &.is-open {
+    .icon-cross {
+        display: block;
     }
+  
+    .icon-menu {
+        display: none;
+    }
+  }
 
   @media screen and (min-width: $tablet) {
     display: none;
   }  
-}
-
-.menu-button.is-open {
-  & .icon-cross {
-      display: block;
-  }
-
-  & .icon-menu {
-      display: none;
-  }
 }
 
 // Кнопка заказа услуги
@@ -127,8 +126,8 @@
 .filter {
   @include centeredFlex();
   
-  margin-right: 0px;
-  margin-left: 0px;
+  margin-right: 0;
+  margin-left: 0;
   margin-bottom: 50px;
 
   @media screen and (min-width: $mobile) and (max-width: 767px) {
@@ -141,7 +140,7 @@
   margin-right: 8px;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   @media screen and (min-width: $mobile) and (max-width: 767px) {
@@ -150,8 +149,6 @@
     }
   }
 }
-
-
 
 .nav-portfolio {
   min-height: 38px;

@@ -9,7 +9,7 @@
   // Оформление списка "Наши преимущества"
 .benefits-list {  
     @media screen and (max-width: 767px) {
-      & li {
+      li:not(:last-child) {
         margin-bottom: 30px;
       }
     }
@@ -18,15 +18,15 @@
         @include centeredFlex($type: flex, $align: baseline, $justify: center);
         flex-wrap: wrap;
 
-        & li:nth-child(-n+2) {
+        li:nth-child(-n+2) {
           margin-bottom: 30px;
         }
 
-        & li:not(:nth-child(2n)){
+        li:not(:nth-child(2n)){
           margin-right: 30px;
         }
 
-        & li {
+        li {
           width: calc((100% - 2 * 30px) / 2);
         }
     }
@@ -34,11 +34,11 @@
         @include centeredFlex($type: flex, $align: baseline, $justify: center);
         flex-wrap: wrap;
 
-        & li:not(:last-child){
+        li:not(:last-child){
           margin-right: 30px;
         }
   
-        & li {
+        li {
           width: calc((100% - 3 * 30px) / 4);
         }
     }
@@ -56,7 +56,7 @@
   // Заголовок
   .title {
     color: $secondary-page-text;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
