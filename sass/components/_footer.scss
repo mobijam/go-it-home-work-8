@@ -22,9 +22,8 @@
     margin-bottom: 60px;
 
     @media screen and  (min-width: $desktop) {
-      display: flex;
+      @include centeredFlex($type: flex, $align: flex-start, $justify: flex-start);
       flex-direction: column;
-      justify-content: flex-start;
       margin-right: 69px;
       margin-bottom: 0;
     }
