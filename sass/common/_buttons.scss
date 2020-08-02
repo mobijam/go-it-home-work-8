@@ -115,11 +115,6 @@
   &:hover, &:focus {
     fill: $main-accent;
   }
-
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
-    top: 98px;
-    right: 38px;
-  }
 }
 
 // Кнопки-фильтры страницы "Портфолио"
