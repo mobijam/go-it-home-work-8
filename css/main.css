@@ -456,6 +456,7 @@ nav {
   padding: 0;
   border: none;
   background-color: transparent;
+  fill: #000000;
 }
 
 .menu-button:hover, .menu-button:focus {
